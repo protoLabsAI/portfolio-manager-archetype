@@ -24,6 +24,11 @@
 # line (scripts/check_bundle_updates.py rewrites the `ref:` token in place).
 id: portfolio-manager-archetype
 name: Portfolio Manager
+# Release version — the source of truth for the vX.Y.Z tag. Read by release-tools'
+# plugin-release.yml (.github/workflows/release.yml); protoAgent's bundle loader ignores it.
+# Bump it in the PR that ships the release, then merge as `chore: release vX.Y.Z` (or
+# run the Release workflow by hand).
+version: 0.2.0
 description: >-
   The manager-of-teams tier (ADR 0055). One agent orchestrates work across MANY Lead
   Engineer teams: it spins a team up per project on demand (portfolio_spinup_team),
